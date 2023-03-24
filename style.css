@@ -1,0 +1,86 @@
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background: rgb(235, 238, 221);
+  counter-reset: page;
+}
+
+
+p {
+  font-size:10pt;
+  letter-spacing: 15px;
+  line-height: 20px;
+  text-align: justify;
+  text-justify: auto;
+  
+}
+
+@media print {
+  body {
+    background: white;
+  }
+}
+
+@page {
+  size: 5in 8in;
+  margin-top: 0.25in;
+  margin-bottom: 0.5in;
+}
+@page:left {
+  margin-left: 0.25in;
+  margin-right: 0.25in;
+  @bottom-left {
+    content: counter(page);
+  }
+  @bottom-right {
+    content:"What is document?";
+  }
+}
+@page:right {
+  margin-left: 0.25in;
+  margin-right: 0.25in;
+
+@bottom-left {
+  content:"08/13/21";
+}
+@bottom-right {
+  content: counter(page);
+}
+}
+
+.two-col {
+  column-count: 3;
+  column-gap: 2em;
+}
+
+img {
+  width:200%;
+  position: absolute;
+  top:0%;
+  left:-50%;
+  transform: rotate(40deg);
+
+}
+
